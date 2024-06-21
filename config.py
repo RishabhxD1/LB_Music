@@ -7,22 +7,22 @@ from pyrogram import filters
 load_dotenv()
 
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID"))
-API_HASH = getenv("API_HASH")
+API_ID = int(getenv("API_ID", ""))
+API_HASH = getenv("API_HASH", "")
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
+BOT_TOKEN = getenv("BOT_TOKEN", None)
 
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
+DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 2000))
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID",-1002172780388))
+LOGGER_ID = int(getenv("LOGGER_ID", -1002172780388))
 
 # Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 7094361343))
+OWNER_ID = int(getenv("OWNER_ID", "7094361343"))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -31,8 +31,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
-    "UPSTREAM_REPO",
-    "https://github.com/RishabhxD1/RB_Music",
+    "UPSTREAM_REPO", "https://github.com/RishabhxD1/RB_Music",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
@@ -81,18 +80,17 @@ START_IMG_URL = getenv(
     "START_IMG_URL", "https://telegra.ph/file/633951ea1b8a7963d55d8.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://telegra.ph/file/81f1118a36f18f37d0e22.jpg"
-)
-PLAYLIST_IMG_URL = "https://telegra.ph/file/633951ea1b8a7963d55d8.jpg"
-STATS_IMG_URL = "https://telegra.ph/file/633951ea1b8a7963d55d8.jpg"
-TELEGRAM_AUDIO_URL = "https://telegra.ph/file/633951ea1b8a7963d55d8.jpg"
-TELEGRAM_VIDEO_URL = "https://telegra.ph/file/633951ea1b8a7963d55d8.jpg"
-STREAM_IMG_URL = "https://te.legra.ph/file/bd995b032b6bd263e2cc9.jpg"
-SOUNCLOUD_IMG_URL = "https://te.legra.ph/file/bb0ff85f2dd44070ea519.jpg"
-YOUTUBE_IMG_URL = "https://te.legra.ph/file/6298d377ad3eb46711644.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/37d163a2f75e0d3b403d6.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/b35fd1dfca73b950b1b05.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/95b3ca7993bbfaf993dcb.jpg"
+    "PING_IMG_URL", "https://telegra.ph/file/81f1118a36f18f37d0e22.jpg
+PLAYLIST_IMG_URL = "https://telegra.ph/file/81f1118a36f18f37d0e22.jpg"
+STATS_IMG_URL = "https://telegra.ph/file/81f1118a36f18f37d0e22.jpg"
+TELEGRAM_AUDIO_URL = "https://telegra.ph/file/81f1118a36f18f37d0e22.jpg"
+TELEGRAM_VIDEO_URL = "https://telegra.ph/file/81f1118a36f18f37d0e22.jpg"
+STREAM_IMG_URL = "https://telegra.ph/file/81f1118a36f18f37d0e22.jpg"
+SOUNCLOUD_IMG_URL = "https://telegra.ph/file/81f1118a36f18f37d0e22.jpg"
+YOUTUBE_IMG_URL = "https://telegra.ph/file/81f1118a36f18f37d0e22.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/81f1118a36f18f37d0e22.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/81f1118a36f18f37d0e22.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/81f1118a36f18f37d0e22.jpg"
 
 
 def time_to_seconds(time):
